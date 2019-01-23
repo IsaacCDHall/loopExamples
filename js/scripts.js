@@ -48,11 +48,10 @@ WORD PUZZLE
 
 $(document).ready(function(){
    $("form").submit(function(event){
-     var formOneInput = $("#formOne").val();
-
-     var convert = formOneInput.replace(/a|e|i|o|u|y/g, "-");
      $('input').hide();
-     alert(convert);
+     var formOneInput = $("#formOne").val();
+     var convert = formOneInput.replace(/a|e|i|o|u|y/g, "-");
+     $(".show").text(convert);
     event.preventDefault();
    });
  });
